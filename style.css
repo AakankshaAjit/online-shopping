@@ -19,7 +19,7 @@ div{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #fff;
+    background-color: red;
     box-shadow: 2px 4px 4px 5px #000000;
 }
 
