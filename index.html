@@ -4,17 +4,500 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My project</title>
-    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        primary: {"50":"#eff6ff","100":"#dbeafe","400":"#bfdbfe","300":"#93c5fd","400":"#60a5fa","500":"#3b82f6","600":"#2563eb","700":"#1d4ed8","800":"#1e40af","900":"#1e3a8a"}
+      }
+    },
+    fontFamily: {
+      'body': [
+    'Inter', 
+    'ui-sans-serif', 
+    'system-ui', 
+    '-apple-system', 
+    'system-ui', 
+    'Segoe UI', 
+    'Roboto', 
+    'Helvetica Neue', 
+    'Arial', 
+    'Noto Sans', 
+    'sans-serif', 
+    'Apple Color Emoji', 
+    'Segoe UI Emoji', 
+    'Segoe UI Symbol', 
+    'Noto Color Emoji'
+  ],
+      'sans': [
+    'Inter', 
+    'ui-sans-serif', 
+    'system-ui', 
+    '-apple-system', 
+    'system-ui', 
+    'Segoe UI', 
+    'Roboto', 
+    'Helvetica Neue', 
+    'Arial', 
+    'Noto Sans', 
+    'sans-serif', 
+    'Apple Color Emoji', 
+    'Segoe UI Emoji', 
+    'Segoe UI Symbol', 
+    'Noto Color Emoji'
+  ]
+    }
+  }
+}
+    </script>
 </head>
 <body>
 
     
 
-<section>
+    <!-- <section class="blue-50 dark:bg-blue-800">
+        <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+            <a href="#" class="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white">
+                <img class="w-8 h-8 mr-2" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/logo.svg" alt="logo">
+                Flowbite    
+            </a>
+            <div class="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
+                <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
+                    <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
+                        Sign up to your account
+                    </h1>
+                    <form class="space-y-4 md:space-y-6" action="#">
+                        <div>
+                            <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
+                            <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@company.com" required="">
+                        </div>
+                        <div>
+                            <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Password</label>
+                            <input type="password" name="password" id="password" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="">
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-start">
+                                <div class="flex items-center h-5">
+                                  <input id="remember" aria-describedby="remember" type="checkbox" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800" required="">
+                                </div>
+                                <div class="ml-3 text-sm">
+                                  <label for="remember" class="text-gray-500 dark:text-gray-300">Remember me</label>
+                                </div>
+                            </div>
+                           
+                        </div>
+                        <button type="submit" class="w-full text-white bg-red-600 hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Sign in</button>
+                        <p class="text-sm font-light text-gray-500 dark:text-gray-400">
+                            Don’t have an account yet? <a href="#" class="font-medium text-primary-600 hover:underline dark:text-primary-500">Sign up</a>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+      </section> -->
 
-<div></div>
-<div></div>
-<div></div>
-</section>
+
+<!-- header  -->
+
+<header class="text-gray-600 body-font">
+  <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+    <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-purple-500 rounded-full" viewBox="0 0 24 24">
+        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+      </svg>
+      <span class="ml-3 text-xl">Tailblocks</span>
+    </a>
+    <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+      <a class="mr-5 hover:text-gray-900">First Link</a>
+      <a class="mr-5 hover:text-gray-900">Second Link</a>
+      <a class="mr-5 hover:text-gray-900">Third Link</a>
+      <a class="mr-5 hover:text-gray-900">Fourth Link</a>
+    </nav>
+    <button class="inline-flex items-center bg-blue-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Button
+      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+        <path d="M5 12h14M12 5l7 7-7 7"></path>
+      </svg>
+    </button>
+  </div>
+</header>
+
+
+  <!-- section 1 -->
+  <section class="text-gray-600 body-font">
+    <div class="container px-5 py-24 mx-auto">
+   
+      <div class="flex mb-10 flex-row-reverse flex-wrap">
+        <div class="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-300 border-opacity-60">
+          <h2 class="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2">Shooting Stars</h2>
+          <p class="leading-relaxed text-base mb-4">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p>
+          <a class="text-yellow-500 inline-flex items-center">Learn More
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+        <div class="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
+          <h2 class="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2">The Catalyzer</h2>
+          <p class="leading-relaxed text-base mb-4">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p>
+          <a class="text-yellow-500 inline-flex items-center">Learn More
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+        <div class="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
+          <h2 class="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2">Neptune</h2>
+          <p class="leading-relaxed text-base mb-4">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p>
+          <a class="text-yellow-500 inline-flex items-center">Learn More
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+        <div class="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
+          <h2 class="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2">Melanchole</h2>
+          <p class="leading-relaxed text-base mb-4">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p>
+          <a class="text-yellow-500 inline-flex items-center">Learn More
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="flex flex-col text-center w-full mb-20">
+        <h2 class="text-xs text-yellow-500 tracking-widest font-medium title-font mb-1">ROOF PARTY POLAROID</h2>
+        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Pitchfork Kickstarter Taxidermy</h1>
+        <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them man bun deep jianbing selfies heirloom prism food truck ugh squid celiac humblebrag.</p>
+      </div>
+      <button class="flex mx-auto mt-16 text-black bg-blue-400 border-0 py-2 px-8 focus:outline-none hover:bg-yellow-600 rounded text-lg">Button</button>
+    </div>
+  </section>
+
+  <!-- section 2  -->
+  
+  <section class="text-gray-600 body-font overflow-hidden">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="lg:w-4/5 mx-auto flex flex-row-reverse flex-wrap">
+        <img alt="ecommerce" class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src="data:image/jpeg;base64,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">
+        <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+          <h2 class="text-sm title-font text-gray-500 tracking-widest">BRAND NAME</h2>
+          <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">The Catcher in the Rye</h1>
+          <div class="flex mb-4">
+            <span class="flex items-center">
+              <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 text-indigo-500" viewBox="0 0 24 24">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+              </svg>
+              <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 text-indigo-500" viewBox="0 0 24 24">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+              </svg>
+              <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 text-indigo-500" viewBox="0 0 24 24">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+              </svg>
+              <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 text-indigo-500" viewBox="0 0 24 24">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+              </svg>
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 text-indigo-500" viewBox="0 0 24 24">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+              </svg>
+              <span class="text-gray-600 ml-3">4 Reviews</span>
+            </span>
+            <span class="flex ml-3 pl-3 py-2 border-l-2 border-gray-200 space-x-2s">
+              <a class="text-gray-500">
+                <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                </svg>
+              </a>
+              <a class="text-gray-500">
+                <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                </svg>
+              </a>
+              <a class="text-gray-500">
+                <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                </svg>
+              </a>
+            </span>
+          </div>
+          <p class="leading-relaxed">Fam locavore kickstarter distillery. Mixtape chillwave tumeric sriracha taximy chia microdosing tilde DIY. XOXO fam indxgo juiceramps cornhole raw denim forage brooklyn. Everyday carry +1 seitan poutine tumeric. Gastropub blue bottle austin listicle pour-over, neutra jean shorts keytar banjo tattooed umami cardigan.</p>
+          <div class="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5">
+            <div class="flex">
+              <span class="mr-3">Color</span>
+              <button class="border-2 border-gray-300 rounded-full w-6 h-6 focus:outline-none"></button>
+              <button class="border-2 border-gray-300 ml-1 bg-gray-700 rounded-full w-6 h-6 focus:outline-none"></button>
+              <button class="border-2 border-gray-300 ml-1 bg-indigo-500 rounded-full w-6 h-6 focus:outline-none"></button>
+            </div>
+            <div class="flex ml-6 items-center">
+              <span class="mr-3">Size</span>
+              <div class="relative">
+                <select class="rounded border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:border-indigo-500 text-base pl-3 pr-10">
+                  <option>SM</option>
+                  <option>M</option>
+                  <option>L</option>
+                  <option>XL</option>
+                </select>
+                <span class="absolute right-0 top-0 h-full w-10 text-center text-gray-600 pointer-events-none flex items-center justify-center">
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4" viewBox="0 0 24 24">
+                    <path d="M6 9l6 6 6-6"></path>
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="flex">
+            <span class="title-font font-medium text-2xl text-gray-900">$58.00</span>
+            <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Button</button>
+            <button class="rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
+              <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+  
+       
+
+
+  <!-- section 3 -->
+  <section class="text-gray-600 body-font">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-col text-center w-full mb-20">
+        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Master Cleanse Reliac Heirloom</h1>
+        <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them man bun deep jianbing selfies heirloom.</p>
+      </div>
+      <div class="flex flex-wrap -m-4">
+        <div class="lg:w-1/3 sm:w-1/2 p-4">
+          <div class="flex relative">
+            <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="https://img.freepik.com/free-photo/showing-cart-trolley-shopping-online-sign-graphic_53876-133967.jpg">
+            <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+              <h2 class="tracking-widest text-[12px]title-font font-medium text-red-500 mb-1">THE SUBTITLE</h2>
+              <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Shooting Stars</h1>
+              <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+            </div>
+          </div>
+        </div>
+        <div class="lg:w-1/3 sm:w-1/2 p-4">
+          <div class="flex relative">
+            <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="https://media.istockphoto.com/id/1249219777/photo/shopping-online-concept-parcel-or-paper-cartons-with-a-shopping-cart-logo-in-a-trolley-on-a.jpg?s=612x612&w=0&k=20&c=EWKEahyVLY8iAHyirCCDESHRGW37lqUJ7In0SssNSLE=">
+            <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+              <h2 class="tracking-widest text-[12px] title-font font-medium text-red-500 mb-1">THE SUBTITLE</h2>
+              <h1 class="title-font text-lg font-medium text-gray-900 mb-3">The Catalyzer</h1>
+              <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+            </div>
+          </div>
+        </div>
+        <div class="lg:w-1/3 sm:w-1/2 p-4">
+          <div class="flex relative">
+            <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="https://www.shutterstock.com/image-photo/ecommerce-add-cart-online-shopping-260nw-1139994800.jpg">
+            <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+              <h2 class="tracking-widest text-sm title-font font-medium text-Black-600 mb-1">THE SUBTITLE</h2>
+              <h1 class="title-font text-lg font-medium text-gray-900 mb-3">The 400 Blows</h1>
+              <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+            </div>
+          </div>
+        </div>
+        <div class="lg:w-1/3 sm:w-1/2 p-4">
+          <div class="flex relative">
+            <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLoIxwuwPM_r-V3hTT9g3j-rfnlmVMDXiJ1gs0SUCL&s">
+            <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+              <h2 class="tracking-widest text-[12px] title-font font-medium text-red-500 mb-1">THE SUBTITLE</h2>
+              <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Neptune</h1>
+              <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+            </div>
+          </div>
+        </div>
+        <div class="lg:w-1/3 sm:w-1/2 p-4">
+          <div class="flex relative">
+            <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="https://img.freepik.com/free-photo/online-purchasing-payment-e-commerce-banking_53876-127604.jpg">
+            <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+              <h2 class="tracking-widest text-[12px] title-font font-medium text-red-500 mb-1">THE SUBTITLE</h2>
+              <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Holden Caulfield</h1>
+              <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+            </div>
+          </div>
+        </div>
+        <div class="lg:w-1/3 sm:w-1/2 p-4">
+          <div class="flex relative">
+            <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="https://neilpatel.com/wp-content/uploads/2015/04/ecommerce.jpg">
+            <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+              <h2 class="tracking-widest text-[12px] title-font font-medium text-red-500 mb-1">THE SUBTITLE</h2>
+              <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Alper Kamu</h1>
+              <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+            </div>
+            
+          </div>
+        </div>
+    
+        <div class="lg:w-1/3 sm:w-1/2 p-4">
+          <div class="flex relative">
+            <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="https://img.freepik.com/free-photo/showing-cart-trolley-shopping-online-sign-graphic_53876-133967.jpg">
+            <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+              <h2 class="tracking-widest text-[12px] title-font font-medium text-red-500 mb-1">THE SUBTITLE</h2>
+              <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Shooting Stars</h1>
+              <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+            </div>
+      </div>
+    </div>
+  </section>
+          
+        
+
+  <!-- footer  -->
+
+  <footer class="text-gray-600 body-font">
+    <div class="container px-5  mx-auto">
+      <div class="flex flex-wrap md:text-left text-center order-first">
+        <div class="lg:w-[20%] md:w-1/2 w-full px-4">
+          <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
+          <nav class="list-none mb-10">
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">First Link</a>
+            </li>
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">Second Link</a>
+            </li>
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">Third Link</a>
+            </li>
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
+            </li>
+          </nav>
+        </div>
+        <div class="lg:w-[20%] md:w-1/2 w-full px-4">
+          <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
+          <nav class="list-none mb-10">
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">First Link</a>
+            </li>
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">Second Link</a>
+            </li>
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">Third Link</a>
+            </li>
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
+            </li>
+          </nav>
+        </div>
+        <div class="lg:w-[] md:w-1/2 w-full px-4">
+          <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
+          <nav class="list-none mb-10">
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">First Link</a>
+            </li>
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">Second Link</a>
+            </li>
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">Third Link</a>
+            </li>
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
+            </li>
+            
+            
+          
+
+       
+             
+              
+          
+        </div>
+        <div class="lg:w-[20%] md:w-1/2 w-full px-4">
+          <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
+          <nav class="list-none mb-10">
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">First Link</a>
+            </li>
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">Second Link</a>
+            </li>
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">Third Link</a>
+            </li>
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
+            </li>
+          </nav>
+        </div>
+        <div class="lg:w-[20%] md:w-1/2 w-full px-4">
+          <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
+          <nav class="list-none mb-10">
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">First Link</a>
+            </li>
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">Second Link</a>
+            </li>
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">Third Link</a>
+            </li>
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
+            </li>
+        
+        
+      
+      
+            
+            
+          
+
+       
+             
+              
+          
+        </div>
+      </div>
+    </div>
+    <div class="bg-gray-100 w-[100%]">
+      <div class="container px-5 py-6 mx-auto flex items-center sm:flex-row flex-col">
+        <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-yellow-500 rounded-full" viewBox="0 0 24 24">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+          </svg>
+          <span class="ml-3 text-xl">Tailblocks</span>
+        </a>
+        <p class="text-sm text-gray-500 sm:ml-6 sm:mt-0 mt-4">© 2020 Tailblocks —
+          <a href="https://twitter.com/knyttneve" rel="noopener noreferrer" class="text-gray-600 ml-1" target="_blank">@knyttneve</a>
+        </p>
+        <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+          <a class="text-gray-500">
+            <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+            </svg>
+          </a>
+          <a class="ml-3 text-black-500">
+            <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+              <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+            </svg>
+          </a>
+          <a class="ml-3 text-gray-500">
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+            </svg>
+          </a>
+          <a class="ml-3 text-gray-500">
+            <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+              <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+              <circle cx="4" cy="4" r="2" stroke="none"></circle>
+            </svg>
+          </a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>
